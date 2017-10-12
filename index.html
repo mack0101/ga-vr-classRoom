@@ -6,14 +6,12 @@
 
 
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-teleport-controls/dist/aframe-teleport-controls.min.js">
-    </script>
 
   </head>
   <body>
     <a-scene>
         <a-camera position="0 -15 10">
-          <a-cursor color="black" teleport-controls="cameraRig" gearvr-controls></a-cursor>
+          <a-cursor color="black"></a-cursor>
         </a-camera>
 
       <a-entity light="type:point; castShadow:true;" position="0 1 0"></a-entity>
@@ -29,14 +27,13 @@
       <!-- models -->
         <a-asset-item id="class-obj" src="assets/models/classroom.obj"></a-asset-item>
         <a-asset-item id="class-mtl" src="assets/models/classroom.mtl"></a-asset-item>
+        <a-asset-item id="class01-obj" src="assets/models/classroom02.obj"></a-asset-item>
+        <a-asset-item id="class02-mtl" src="assets/models/classroom02.mtl"></a-asset-item>
 
       </a-assets>
 
-      <a-box position="2 2 2" color="black" width="0.2" height="0.1">
 
-      </a-box>
-
-      <a-obj-model src="#class-obj" mtl="#class-mtl" scale="1 1 1" position="0 -25 0">
+      <a-obj-model src="#class01-obj" mtl="#class02-mtl" scale="1 1 1" position="0 -25 0">
         <a-animation attribute="rotation" begin="mouseenter" end="click"
              dur="1000"
              to="0 360 0"
@@ -45,20 +42,22 @@
       </a-obj-model>
 
       <!-- window view -->
-      <a-image src="#city" position="-48 -5 -21" rotation="0 -90 0" scale="35 35 35" width="2"></a-image>
+      <a-image src="#city" position="-48 -5 8" rotation="0 -90 0" scale="35 35 35" width="2"></a-image>
 
       <!-- projector -->
-      <a-image src="#projector" position="2 -7 -22" rotation="0 0 0" scale="9 9 9" width="3" height="1.7"></a-image>
+      <a-image src="#projector" position="2 -3 -22.5" rotation="0 0 0" scale="15 15 15" width="3" height="1.7"></a-image>
 
       <!-- coding -->
-      <a-image src="#coding" position="2 -7 -20" rotation="0 0 0" scale="7 7 7" width="3" height="1.7"></a-image>
+      <a-image src="#coding" position="2 -3 -22" rotation="0 0 0" scale="13 13 13" width="3" height="1.7"></a-image>
 
-      <a-box position="-1 -15 5" rotation="0 45 0" color="#4CC3D9">
-          <a-animation attribute="rotation" begin="mouseenter" end="mouseleave"
-               dur="1000"
-               to="0 360 10"
-               repeat="indefinite">
-          </a-animation>
+
+
+      <a-box src="#image" position="9 -14 6" rotation="0 45 0" scale="2 2 2">
+        <a-animation attribute="rotation" begin="mouseenter" end="mouseleave"
+                 dur="2000"
+                 to="0 360 0"
+                 repeat="indefinite">
+        </a-animation>
       </a-box>
 
       <!-- back row 1 -->
@@ -142,13 +141,50 @@
         </a-animation>
       </a-box>
 
-      <a-cylinder position="5 -15 -3" radius="0.5" height="1.5" scale="2 2 2" color="#FFC65D">
+      <!-- front row 10 -->
+      <a-box src="#image" position="-25 -15 16" scale="3 3 3">
         <a-animation attribute="rotation" begin="mouseenter" end="mouseleave"
-             dur="1000"
-             to="360 0 0"
+             dur="2000"
+             to="0 360 0"
              repeat="indefinite">
         </a-animation>
-      </a-cylinder>
+      </a-box>
+
+      <!-- front row 11 -->
+      <a-box src="#image" position="-17 -16 16" scale="3 3 3">
+        <a-animation attribute="rotation" begin="mouseenter" end="mouseleave"
+             dur="2000"
+             to="0 360 0"
+             repeat="indefinite">
+        </a-animation>
+      </a-box>
+
+      <!-- front row 12 -->
+      <a-box src="#image" position="-11 -17 18" scale="3 3 3">
+        <a-animation attribute="rotation" begin="mouseenter" end="mouseleave"
+             dur="2000"
+             to="0 360 0"
+             repeat="indefinite">
+        </a-animation>
+      </a-box>
+
+      <!-- front row 13 -->
+      <a-box src="#image" position="-3 -17 18" scale="3 3 3">
+        <a-animation attribute="rotation" begin="mouseenter" end="mouseleave"
+             dur="2000"
+             to="0 360 0"
+             repeat="indefinite">
+        </a-animation>
+      </a-box>
+
+      <!-- front row 14 -->
+      <a-box src="#image" position="7 -17 18" scale="3 3 3">
+        <a-animation attribute="rotation" begin="mouseenter" end="mouseleave"
+             dur="2000"
+             to="0 360 0"
+             repeat="indefinite">
+        </a-animation>
+      </a-box>
 
       <!-- <a-plane src="#floor" position="0 0 -4" rotation="-90 0 0" width="50" height="50"></a-plane> -->
       <a-sky src="#sw"></a-sky>
