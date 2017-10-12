@@ -19,11 +19,15 @@
       <a-entity light="type:point; castShadow:true;" position="0 1 0"></a-entity>
 
       <a-assets>
+        <!-- images -->
         <img id="image" src="assets/images/copy.jpg">
         <img id="sw" src="assets/images/MF8K.jpg">
-        <img id="floor" src="floor.jpg">
+        <img id="city" src="assets/images/newyork.jpg">
+
+      <!-- models -->
         <a-asset-item id="class-obj" src="assets/models/classroom.obj"></a-asset-item>
         <a-asset-item id="class-mtl" src="assets/models/classroom.mtl"></a-asset-item>
+
       </a-assets>
 
       <a-box position="2 2 2" color="black" width="0.2" height="0.1">
@@ -37,6 +41,9 @@
              repeat="indefinite">
         </a-animation>
       </a-obj-model>
+
+      <!-- window view -->
+      <a-image src="#city" position="-50 -5 -12" rotation="0 -90 0" scale="30 30 30" width="2"></a-image>
 
       <a-box position="-1 -15 5" rotation="0 45 0" color="#4CC3D9">
           <a-animation attribute="rotation" begin="mouseenter" end="mouseleave"
