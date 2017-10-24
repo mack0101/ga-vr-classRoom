@@ -1,11 +1,11 @@
 # Final GA Project 
 # GA VR Classroom
 
-### For my final project of my Web Development course I chose to do something with VR.
-### VR is a fascinating field that I feel very passionate about. Since this was our last project I wanted to make something that I can look back at and remember my time at General Assembly.
-### (we did not cover any VR during the course)
+For my final project of my Web Development course I chose to do something with VR.
+VR is a fascinating field that I feel very passionate about. Since this was our last project I wanted to make something that I can look back at and remember my time at General Assembly.
+(we did not cover any VR during the course)
 
-### This project was very rushed because of unforeseen circumstances and I'm already working on a second, more improved version.
+This project was very rushed because of unforeseen circumstances and I'm already working on a second, more improved version.
 
 # License 
-### This project is licensed under MIT
+This project is licensed under MIT
